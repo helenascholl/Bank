@@ -13,6 +13,10 @@ class GiroKonto extends BankKonto {
     einzahlen(betrag) {
         this._kontoStand -= betrag + this.gebuehr;
     }
+
+    toString() {
+        return `${this._name};GiroKonto;${this._kontoStand}`;
+    }
 }
 
 module.exports = GiroKonto;
